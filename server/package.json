@@ -18,6 +18,7 @@
   "homepage": "https://github.com/ayebear/youtorials#readme",
   "dependencies": {
     "express": "^4.15.2",
-    "express-graphql": "^0.6.4"
+    "express-graphql": "^0.6.4",
+    "graphql": "^0.9.2"
   }
 }
