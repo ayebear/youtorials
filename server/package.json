@@ -1,0 +1,23 @@
+{
+  "name": "youtorials-server",
+  "version": "1.0.0",
+  "description": "Youtorials server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ayebear/youtorials.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ayebear/youtorials/issues"
+  },
+  "homepage": "https://github.com/ayebear/youtorials#readme",
+  "dependencies": {
+    "express": "^4.15.2",
+    "express-graphql": "^0.6.4"
+  }
+}
