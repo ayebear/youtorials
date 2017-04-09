@@ -22,6 +22,7 @@ var schema = buildSchema(`
 		hello(name: String): String
 		list: [Tutorial]
 		get(author: String): Tutorial
+		save(tutorial: Tutorial): String
 	}
 `)
 
@@ -31,20 +32,19 @@ var root = {
 		return `Hello ${args.name}!`
 	},
 	list: () => {
-
+		return [{author: 'test'}]
 	},
 	get: (args) => {
 		return tutorials.findOne({ author: args.author }).then(result => {
 			return result
 		})
+	},
+	save: (args) => {
+		console.log(args)
+		// let result = tutorials.insert(args)
+		return 'placeholderId'
 	}
 }
-
-// Run the GraphQL query '{ hello }' and print out the response
-graphql(schema, '{ get(author: "Kevin") {author, title, content} }', root).then((response) => {
-	console.log(response)
-})
-
 
 
 // Database testing
@@ -62,7 +62,7 @@ const app = express()
 app.use('/graphql', graphqlHTTP({
 	schema: schema,
 	rootValue: root,
-	graphiql: false
+	graphiql: true
 }))
 
 app.listen(4000)
