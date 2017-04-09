@@ -19,6 +19,7 @@
   "dependencies": {
     "express": "^4.15.2",
     "express-graphql": "^0.6.4",
-    "graphql": "^0.9.2"
+    "graphql": "^0.9.2",
+    "monk": "^4.0.0"
   }
 }
